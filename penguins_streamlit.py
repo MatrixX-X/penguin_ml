@@ -71,9 +71,7 @@ st.write('Below are the histograms for each continuous variable '
  'separated by penguin species. The vertical line '
  'represents your the inputted value.')
 
-if penguin_file is None:
-    pass
-else:
+try:
     fig, ax = plt.subplots()
     ax = sns.displot(data=penguin_df, x='bill_length_mm', hue='species')
     plt.axvline(bill_length)
@@ -89,3 +87,5 @@ else:
     plt.axvline(flipper_length)
     plt.title('Flipper Length by Species')
     st.pyplot(ax)
+except:
+    print('')
