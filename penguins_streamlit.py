@@ -70,7 +70,7 @@ st.write('Below are the histograms for each continuous variable '
  'separated by penguin species. The vertical line '
  'represents your the inputted value.')
 
-if penguin_df is None:
+if penguin_file is None:
     pass
 else:
     fig, ax = plt.subplots()
